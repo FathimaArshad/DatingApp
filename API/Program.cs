@@ -23,6 +23,7 @@ if (app.Environment.IsDevelopment())
 
 //app.UseAuthorization();
 
+app.UseCors(builder => builder.AllowAnyHeader().AllowAnyMethod().WithOrigins("https://localhost:4200"));
 app.MapControllers();
 
 app.Run();
